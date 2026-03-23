@@ -1,4 +1,4 @@
-name: Failing Workflow
+name: Fixed Workflow
 
 on: [push]
 
@@ -10,5 +10,5 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Run wrong command
-        run: wrongcommand123   # ❌ This will fail
+      - name: Run correct command
+        run: echo "Workflow fixed successfully 🎉"
