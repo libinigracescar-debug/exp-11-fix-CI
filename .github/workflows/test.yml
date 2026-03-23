@@ -1,0 +1,14 @@
+name: Failing Workflow
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run wrong command
+        run: wrongcommand123   # ❌ This will fail
